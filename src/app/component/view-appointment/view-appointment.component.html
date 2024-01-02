@@ -1,0 +1,14 @@
+<div class="flex justify-center items-center h-full flex-col">
+  <div class="w-1/2 text-center">
+    <h2>Name: {{eventData.name}}</h2>
+    <p>Gender: {{eventData.gender}}</p>
+    <p>Age: {{eventData.age}}</p>
+    <p>Date: {{eventData.date_}}</p>
+    <p>Time: {{eventData.time}}</p>
+
+  </div>
+  <div class="flex justify-between gap-4">
+    <button mat-dialog-close mat-raised-button color="primary">Close</button>
+    <button mat-raised-button color="primary" (click)="deleteEvent()">Delete this event</button>
+  </div>
+</div>

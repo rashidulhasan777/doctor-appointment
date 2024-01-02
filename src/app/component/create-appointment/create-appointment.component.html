@@ -1,0 +1,37 @@
+<div class="flex justify-center items-center">
+<div class="pt-12 text-center">
+  <form class="example-form" (submit)="onSubmit()" [formGroup]="appointmentForm">
+    <h2>Create Appointment</h2>
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Gender</mat-label>
+      <input matInput formControlName="gender">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Age</mat-label>
+      <input matInput formControlName="age">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Date</mat-label>
+      <input matInput placeholder="2024-01-01" formControlName="date">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Time</mat-label>
+      <input matInput placeholder="03:00" formControlName="time">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+
+</div>
+
+</div>

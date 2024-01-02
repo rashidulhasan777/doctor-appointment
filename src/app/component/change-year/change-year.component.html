@@ -1,0 +1,18 @@
+<div class="">
+  <div class="p-8">
+    <mat-form-field>
+      <mat-label>Select year</mat-label>
+      <mat-select (selectionChange)="setYear($event.value)">
+        @for (year of years; track year) {
+          <mat-option [value]="year">{{year}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">Cancel</button>
+      <button mat-button [mat-dialog-close]="selectedYear" cdkFocusInitial>Change year</button>
+    </div>
+
+  </div>
+</div>

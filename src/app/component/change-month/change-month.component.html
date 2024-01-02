@@ -1,0 +1,18 @@
+<div class="">
+  <div class="p-8">
+    <mat-form-field>
+      <mat-label>Select month</mat-label>
+      <mat-select (selectionChange)="setMonth($event.value)">
+        @for (month of months; track month) {
+          <mat-option [value]="month">{{month}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">Cancel</button>
+      <button mat-button [mat-dialog-close]="selectedMonth" cdkFocusInitial>Change month</button>
+    </div>
+
+  </div>
+</div>
