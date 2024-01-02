@@ -8,7 +8,7 @@ import { Event } from '../interface/event';
 export class EventService {
   httpClient = inject(HttpClient);
   constructor() { }
-  baseUrl = 'http://localhost:3000';
+  baseUrl = 'https://appointment-server-241ecbeb0549.herokuapp.com';
 
   postEvent(event: Event) {
     return this.httpClient.post<Event>(`${this.baseUrl}/events`, event);
